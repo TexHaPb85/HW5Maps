@@ -17,7 +17,7 @@ public class Library {
     }
 
     public LibraryUser getUserByName(String name) {
-        return users.stream().filter(user -> user.getName().equals(name)).collect(Collectors.toList()).get(0);
+        return users.stream().filter(user -> user.getName().equals(name)).collect(Collectors.toList()).get(0);//can it be easier?
     }
 
 
