@@ -21,8 +21,8 @@ public class Demonstrator {
         } while (ifContinue.equals("yes"));
 
 
-        System.out.println("All the taken books:\n" + library.getUserByName("Mike").getAllBooks());
-        System.out.println("All the dates of book taking:\n" + library.getUserByName("Mike").getAllDates());
+        library.getUserByName("Mike").getAllBooks();
+        library.getUserByName("Mike").getAllDates();
     }
 
     public Date enterDate(Scanner sc) {

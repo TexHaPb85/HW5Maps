@@ -32,12 +32,14 @@ public class LibraryUser {
         return "You have not taken books at the date " + date.toString();
     }
 
-    public String getAllBooks() {
-        return takenBooks.values().toString();
+    public void getAllBooks() {
+        System.out.println("\nAll the taken books:");
+        takenBooks.values().forEach(System.out::println);
     }
 
-    public String getAllDates() {
-        return takenBooks.keySet().toString();
+    public void getAllDates() {
+        System.out.println("\nAll the dates of book taking:");
+        takenBooks.keySet().forEach(System.out::println);
     }
 
     public String getName() {
