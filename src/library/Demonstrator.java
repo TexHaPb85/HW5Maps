@@ -4,14 +4,17 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Demonstrator {
-    public void libaryWorkDemo() {
-        Library library = new Library();
-        library.addUser(new LibraryUser("Mike"));
+    private static Library library = new Library();
 
+    static {
+        library.addUser(new LibraryUser("Mike"));
         library.getUserByName("Mike").takeBook(new Date(99, 6, 5), "Gamlet");
         library.getUserByName("Mike").takeBook(new Date(99, 6, 5), "Harry Potter");
         library.getUserByName("Mike").takeBook(new Date(99, 6, 6), "The Song of ice and fire");
         library.getUserByName("Mike").takeBook(new Date(99, 6, 7), "The Lord of the Ring");
+    }
+
+    public static void libraryWorkDemo() {
         String ifContinue;
         do {
             Scanner sc = new Scanner(System.in);
@@ -25,7 +28,7 @@ public class Demonstrator {
         library.getUserByName("Mike").getAllDates();
     }
 
-    public Date enterDate(Scanner sc) {
+    public static Date enterDate(Scanner sc) {
         System.out.println("Enter day");
         int day = sc.nextInt();
         System.out.println("Enter month");
