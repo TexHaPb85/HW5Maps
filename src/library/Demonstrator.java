@@ -14,7 +14,7 @@ public class Demonstrator {
         library.getUserByName("Mike").takeBook(new Date(99, 6, 7), "The Lord of the Ring");
     }
 
-    public static void libraryWorkDemo() {
+    public static void demonstrate() {
         String ifContinue;
         do {
             Scanner sc = new Scanner(System.in);
