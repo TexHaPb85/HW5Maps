@@ -22,8 +22,6 @@ public class Demonstrator {
                     "\nDo you want to check one more date(yes/no)");
             ifContinue = sc.next();
         } while (ifContinue.equals("yes"));
-
-
         library.getUserByName("Mike").getAllBooks();
         library.getUserByName("Mike").getAllDates();
     }
